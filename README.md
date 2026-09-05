@@ -63,6 +63,16 @@ npm run test:unit   # Vitest unit tests (transforms + data-access helpers)
 npm run test:e2e    # Playwright E2E tests (builds + previews the static site first)
 ```
 
+## Filtering games
+
+The home page supports filtering by one or more categories and by a single publisher. Filters are stored in the URL, so filtered views can be bookmarked or shared:
+
+```text
+/?category=1&category=3&publisher=2
+```
+
+Category selections use OR matching, while category and publisher filters combine with AND matching. Use the **Clear** button to return to the full catalog.
+
 ## Linting
 
 The frontend uses ESLint to enforce code quality across TypeScript and Astro files. Run it with:
